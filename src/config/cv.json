@@ -1,8 +1,8 @@
 {
     "basic": {
-        "name": "Paul Smith",
-        "job": "Software Engineer",
-        "summary": "Transforming challenges into opportunities with cutting-edge technology. Driven by a love for elegant, robust code.",
+        "name": "Mónica Perdomo Santana", 
+        "job": "QA Tester",
+        "summary": "I'm learning QA testing on my own and building hands-on experience through a personal project called Solara Codeworks. I'm working on things like writing test cases, finding bugs, using Jira, and trying out tools like Playwright, Postman, and GitHub.",
         "cv_file_name": "paul_cv.pdf"
     },
     "experiences": [
@@ -39,34 +39,15 @@
             "details": "Focused on advanced algorithms, cloud computing, and full-stack development. Published research papers on scalable microservices architecture."
         }
     ],
-    "projects": [
-        {
-            "imageUrl": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&w=764&auto=format&fit=crop",
-            "title": "hello.com",
-            "type": "Website",
-            "link": "https://github.com/wasutz/astro-resume-theme"
-        },
-        {
-            "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=764&auto=format&fit=crop",
-            "title": "Paul UI kit collections",
-            "type": "UI Kit",
-            "link": "https://github.com/wasutz/astro-resume-theme"
-        },
-        {
-            "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=764&auto=format&fit=crop",
-            "title": "paul.com",
-            "type": "Website",
-            "link": "https://github.com/wasutz/astro-resume-theme"
-        }
-    ],
+    "projects": [],
     "menuItems": [
         {
-            "name": "About",
-            "link": "/"
+            "name": "Home",
+            "link": "#home"
         },
         {
-            "name": "Blog",
-            "link": "/blogs"
+            "name": "Portfolio",
+            "link": "#portfolio"
         }
     ],
     "socialLinks": [
