@@ -32,11 +32,11 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "Test Procedure Document for Next Task App",
+    title: "Test Procedure Document Sample for Next Task App",
     description:
-      "Sample of the Test Plan done on Jira and Xray, for Next Task app.",
+      "Sample of the Test Plan done on Jira with Xray and Confluence, for NextTask app.",
     link: "#",
-    github: "https://github.com/Pietro923/Programacion",
+    github: "",
     image: "/projects/jira.png",
     tags: [TAGS.Html, TAGS.Css, TAGS.Js, TAGS.React],
   },
@@ -52,7 +52,7 @@ const PROJECTS = [
 ];
 ---
 
-<section id="projects" class="w-full mx-auto lg:w-[800px] py-36">
+<section id="portfolio" class="w-full mx-auto border-2 max-w-7xl py-36">
   <h1 class="text-3xl font-semibold text-center capitalize lg:text-4xl">
     Portfolio
   </h1>
@@ -60,7 +60,39 @@ const PROJECTS = [
     {
       PROJECTS.map(({ image, title, description, tags, link, github }) => (
         <article class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
-          <div class="w-full md:w-1/2 flex items-center group">
+          <a
+            href="#"
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          >
+            <img
+              class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+              src={image}
+              alt=""
+            />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {title}
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                {description}
+              </p>
+              <div class="flex flex-wrap mt-2">
+                <ul class="flex flex-row mb-2 gap-x-2">
+                  {tags.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                      >
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </a>
+
+          {/* <div class="w-full md:w-1/2 flex items-center group">
             <div class="relative flex flex-col items-center transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800 group-hover:shadow-2xl">
               <img
                 alt="Captura del Proyecto"
@@ -80,7 +112,6 @@ const PROJECTS = [
                     <span
                       class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
                     >
-                      {/* <tag.icon class="size-4" /> */}
                       {tag.name}
                     </span>
                   </li>
@@ -89,23 +120,7 @@ const PROJECTS = [
             </div>
 
             <div class="mt-2 text-lg mb-4">{description}</div>
-
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              Code and Preview
-              {github && (
-                <Social_icons href={github}>
-                  <Github class="size-6" />
-                  Code
-                </Social_icons>
-              )}
-              {link && (
-                <Social_icons href={link}>
-                  <Link class="size-4" />
-                  Preview
-                </Social_icons>
-              )}
-            </footer>
-          </div>
+          </div> */}
         </article>
       ))
     }
