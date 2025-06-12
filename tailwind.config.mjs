@@ -15,6 +15,11 @@ export default {
 				default: "var(--color-background)",
 				offset: "var(--color-background-offset)",
 				border: "var(--color-border)",
+				start: "var(--color-body-background-start)",
+				end: "var(--color-body-background-end)",
+			},
+			backgroundImage: {
+				'soft-gradient': 'linear-gradient(to bottom right, #f9fafb, #ffffff)',
 			},
 			borderColor: {
 				default: "var(--color-border)",

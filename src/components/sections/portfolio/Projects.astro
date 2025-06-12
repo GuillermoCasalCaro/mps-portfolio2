@@ -1,122 +1,78 @@
 ---
-// import Html from "../../../icons/Tecnologias/Lenguajes/Html.astro";
-// import Css from "../../../icons/Tecnologias/Lenguajes/Css.astro";
-// import Js from "../../../icons/Tecnologias/Lenguajes/Js.astro";
-// import React from "../../../icons/Tecnologias/Frameworks_Librerias/React.astro";
-import Social_icons from "./Social_icons.astro";
-import Github from "../../../icons/social/Github.astro";
-import Link from "../../../icons/social/Link.astro";
-//https://github.com/Pietro923/portfolio-Pietro/blob/main/src/components/Social_icons.astro
 const TAGS = {
-  Html: {
-    name: "Html",
-    class: "bg-[#963419] text-white",
-    // icon: Html,
+  jira: {
+    name: "Jira",
+    class: "bg-blue-700 text-white", // similar al azul Atlassian
   },
-  Css: {
-    name: "Css",
-    class: "bg-[#07436b] text-white",
-    // icon: Css,
+  xray: {
+    name: "Xray",
+    class: "bg-blue-500 text-white", // azul más claro
   },
-  Js: {
-    name: "Js",
-    class: "bg-[#a39535] text-white",
-    // icon: Js,
+  postman: {
+    name: "Postman",
+    class: "bg-orange-500 text-white",
   },
-  React: {
-    name: "React",
-    class: "bg-[#1c7777] text-white",
-    // icon: React,
+  newman: {
+    name: "Newman",
+    class: "bg-orange-400 text-white",
   },
-  Python: {
-    name: "Python",
-    class: "bg-[#3776AB] text-white",
-    // icon: Python,
-  },
-  Selenium: {
-    name: "Selenium",
-    class: "bg-[#43B02A] text-white",
-    // icon: Selenium,
-  },
-  Playwright: {
-    name: "Playwright",
-    class: "bg-[#5A0FC8] text-white",
-    // icon: Playwright,
+  jenkins: {
+    name: "Jenkins",
+    class: "bg-red-600 text-white",
   },
 };
 
 const PROJECTS = [
   {
-    title: "Test Plan & Documentation – NextTask App (Xray + Jira)",
+    title: "Full API Testing Automation of Trello API",
     description:
-      "Created a sample test plan using Xray and Jira, with detailed documentation in Confluence. The plan covers the core CRUD functionality of the NextTask productivity app, including test cases, execution steps, and traceability matrix.",
+      "Designed and implemented a complete API test automation workflow for the Trello public API. Developed a lightweight application that integrates real-time data from a public weather API, focusing on validating request/response behavior and error handling through structured Postman collections.\nAutomated the full test execution pipeline using Newman for CLI-based testing and Jenkins for continuous integration, ensuring reliability and quick feedback across environments.",
     link: "#",
-    github: "",
+    image: "/projects/postman-collections.png",
+    tags: [TAGS.postman, TAGS.newman, TAGS.jenkins],
+  },
+  {
+    title: "Test Plan & Bug Reporting — NextTask App",
+    description:
+      "Created a comprehensive test plan for the NextTask productivity application using Xray and Jira, with full documentation managed in Confluence. The plan focuses on validating the core CRUD functionality, including clearly defined test cases, structured execution steps, and a complete traceability matrix to link requirements with validations.\nBug tracking and reporting were handled directly in Jira to ensure streamlined collaboration and issue visibility.",
+    link: "#",
     image: "/projects/jira.png",
-    tags: [TAGS.Html, TAGS.Css, TAGS.Js, TAGS.React],
-  },
-  {
-    title: "API Testing with Postman – Weather API Automation",
-    description:
-      "Developed and tested a small app that integrates a public weather API. Focused on writing and automating test cases using Postman collections to validate endpoints, responses, and error handling.",
-    link: "#",
-    github: "https://github.com/Pietro923/api-del-clima",
-    image: "/projects/proyecto2.webp",
-    tags: [TAGS.Html, TAGS.Css, TAGS.Js],
-  },
-  {
-    title: "Web UI Test Automation with Selenium",
-    description:
-      "Built a basic UI test suite using Selenium WebDriver in Python to automate browser actions on a demo e-commerce website. Covered login, navigation, and product selection scenarios. Emphasis on locators and test reliability.",
-    link: "#",
-    github: "", // Add if available
-    image: "/projects/selenium.png", // Replace with your actual image path
-    tags: [TAGS.Python, TAGS.Selenium],
-  },
-  {
-    title: "End-to-End Testing with Playwright",
-    description:
-      "Created an automated test flow using Playwright (JavaScript) for a task management app. The project includes functional tests for user login, task creation, editing, and deletion. Focused on cross-browser testing and execution speed.",
-    link: "#",
-    github: "", // Add if available
-    image: "/projects/playwright.png", // Replace with your actual image path
-    tags: [TAGS.Js, TAGS.Playwright],
+    tags: [TAGS.jira, TAGS.xray],
   },
 ];
 ---
 
 <section id="portfolio" class="w-full mx-auto max-w-7xl py-36">
-  <h1 class="text-3xl font-semibold text-center capitalize lg:text-4xl">
-    Portfolio
+  <h1 class="text-3xl lg:text-5xl font-semibold text-center capitalize">
+    Experience & Projects
   </h1>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-8 mt-8 xl:mt-12">
     {
-      PROJECTS.map(({ image, title, description, tags, link, github }) => (
-        <article class="flex flex-col h-full">
+      PROJECTS.map(({ image, title, description, tags }) => (
+        <article class="flex flex-col h-full bg-offset hover:bg-start transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1 hover:border-primary">
           <a
-            href="#"
             class="flex flex-col h-full
-          items-center bg-white border border-gray-200 rounded-lg shadow-sm
-          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          items-center rounded-lg shadow-sm
+           border border-default hover:border-primary"
           >
-            <img
-              class="object-cover w-full rounded-t-lg h-96"
-              src={image}
-              alt=""
-            />
-            <div class="flex flex-col justify-between p-4 leading-normal flex-grow">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                {title}
-              </h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                {description}
-              </p>
+            <div class="w-full h-96 overflow-hidden rounded-t-lg">
+              <img
+                class="object-cover w-full h-full transition-transform duration-500 ease-in-out hover:scale-110"
+                src={image}
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col justify-between p-5 leading-normal flex-grow">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight">{title}</h5>
+              {description.split("\n").map((line) => (
+                <p class="mb-3 font-normal text-xl">{line}</p>
+              ))}
               <div class="flex flex-wrap mt-2">
-                <ul class="flex flex-row mb-2 gap-x-2">
+                <ul class="flex flex-row mb-2 gap-x-4">
                   {tags.map((tag) => (
                     <li>
                       <span
-                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                        class={`flex rounded-full text-s ${tag.class} py-1 px-3 font-bold transition-all duration-200 transform hover:scale-105 hover:shadow-md hover:ring-1 hover:ring-black/10 dark:hover:ring-white/10`}
                       >
                         {tag.name}
                       </span>
@@ -126,36 +82,6 @@ const PROJECTS = [
               </div>
             </div>
           </a>
-
-          {/* <div class="w-full md:w-1/2 flex items-center group">
-            <div class="relative flex flex-col items-center transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800 group-hover:shadow-2xl">
-              <img
-                alt="Captura del Proyecto"
-                class="object-cover object-top w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                loading="lazy"
-                src={image}
-              />
-            </div>
-          </div>
-
-          <div class="w-full md:w-1/2 flex flex-col justify-center">
-            <h3 class="text-2xl font-bold mb-2">{title}</h3>
-            <div class="flex flex-wrap mt-2">
-              <ul class="flex flex-row mb-2 gap-x-2">
-                {tags.map((tag) => (
-                  <li>
-                    <span
-                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-                    >
-                      {tag.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div class="mt-2 text-lg mb-4">{description}</div>
-          </div> */}
         </article>
       ))
     }
