@@ -2,59 +2,84 @@
 const { id } = Astro.props;
 ---
 
-<dialog id={id} class="p-0 border-none bg-transparent text-default">
-  <!-- Fake backdrop -->
-  <div class="fixed inset-0 bg-black/30 backdrop-blur-sm" data-dialog-backdrop>
+<div
+  id={id}
+  class="fixed inset-0 z-50 hidden items-center justify-center"
+  aria-modal="true"
+  role="dialog"
+  aria-labelledby={`${id}-title`}
+  aria-describedby={`${id}-desc`}
+>
+  <!-- Backdrop -->
+  <div
+    class="absolute inset-0 bg-gray-50/30 backdrop-blur-sm"
+    data-dialog-backdrop
+  >
   </div>
 
-  <!-- Modal content -->
+  <!-- Modal Content -->
   <div
-    class="relative z-10 bg-default p-6 max-w-xl mx-auto mt-40 rounded-xl shadow-xl"
+    class="m-4 relative z-10 max-w-4xl w-full max-h-[90vh] overflow-y-auto bg-modal p-6 sm:p-12 rounded-xl shadow-xl"
     data-dialog-content
   >
     <slot />
   </div>
-</dialog>
+</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const openButtons = document.querySelectorAll("[data-dialog-open]");
     const closeButtons = document.querySelectorAll("[data-dialog-close]");
 
+    function openDialog(dialog) {
+      dialog.classList.remove("hidden");
+      dialog.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeDialog(dialog) {
+      dialog.classList.remove("flex");
+      dialog.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
     openButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         const dialogId = btn.getAttribute("data-dialog-open");
-        const dialog = document.getElementById(dialogId) as HTMLDialogElement;
-        if (dialog && dialog.showModal) {
-          dialog.showModal();
-          //   document.body.classList.add("!overflow-hidden");
+        const dialog = document.getElementById(dialogId);
+        if (dialog) {
+          openDialog(dialog);
 
-          const backdrop = dialog.querySelector("[data-dialog-backdrop]");
-          const content = dialog.querySelector("[data-dialog-content]");
+          const backdrop = dialog.querySelector(
+            "[data-dialog-backdrop]"
+          ) as HTMLElement;
+          const content = dialog.querySelector(
+            "[data-dialog-content]"
+          ) as HTMLElement;
 
-          if (backdrop) {
-            backdrop.addEventListener("click", () => {
-              dialog.close();
-              //   document.body.classList.remove("!overflow-hidden");
-            });
-          }
-
-          if (content) {
-            content.addEventListener("click", (e) => e.stopPropagation());
-          }
+          backdrop.onclick = () => closeDialog(dialog);
+          content.onclick = (e) => e.stopPropagation();
         }
       });
     });
 
     closeButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
-        const dialog = btn.closest("dialog");
-        if (dialog) {
-          dialog.close();
-          document.body.classList.remove("overflow-hidden");
-        }
+        const dialog = btn.closest("[role='dialog']");
+        if (dialog) closeDialog(dialog);
       });
     });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const openDialog = document.querySelector("[role='dialog'].flex");
+      if (openDialog) {
+        openDialog.classList.remove("flex");
+        openDialog.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+    }
   });
 </script>

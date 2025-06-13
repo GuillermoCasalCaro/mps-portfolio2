@@ -17,6 +17,7 @@ export default {
 				border: "var(--color-border)",
 				start: "var(--color-body-background-start)",
 				end: "var(--color-body-background-end)",
+				modal: "var(--color-modal-background)",
 			},
 			backgroundImage: {
 				'soft-gradient': 'linear-gradient(to bottom right, #f9fafb, #ffffff)',

@@ -7,7 +7,8 @@
     --color-background-offset: theme("colors.gray.100");
     --color-border: theme("colors.gray.900" / 10%);
     --color-body-background-start: #fff; 
-    --color-body-background-end: #fffcf2;    
+    --color-body-background-end: #fffcf2;
+    --color-modal-background: #fff;
 }
 
 [data-theme="dark"] {
@@ -20,4 +21,5 @@
     --color-border: theme("colors.gray.50" / 10%);
     --color-body-background-start: #0f172a;
     --color-body-background-end: #1e293b;  
+    --color-modal-background: theme("colors.zinc.800") ;
 }
