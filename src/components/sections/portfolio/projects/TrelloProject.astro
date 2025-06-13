@@ -1,0 +1,81 @@
+---
+
+---
+
+<div>
+  <h2 class="text-3xl font-bold mb-4 text-default">
+    Full API Testing Automation of Trello API
+  </h2>
+
+  <p class="mb-4">
+    This project involved designing and implementing a comprehensive API test
+    automation workflow for the public Trello API. The core focus was to ensure
+    that all request and response behaviors, as well as error handling
+    scenarios, were thoroughly validated through well-structured Postman
+    collections.
+  </p>
+
+  <img
+    src="/images/postman-dashboard.png"
+    alt="Postman Dashboard Screenshot"
+    class="mb-6 rounded shadow-md border border-default"
+  />
+
+  <p class="mb-4">
+    To automate the test executions, we used <strong>Newman</strong>, the CLI
+    companion for Postman, enabling integration with continuous integration
+    pipelines. This was complemented by <strong>Jenkins</strong>, which
+    orchestrated the CI/CD workflows to provide fast and reliable feedback on
+    every code change.
+  </p>
+
+  <img
+    src="/images/jenkins-pipeline.png"
+    alt="Jenkins Pipeline Screenshot"
+    class="mb-6 rounded shadow-md border border-default"
+  />
+
+  <p class="mb-4 text-default">
+    Additionally, <strong>GitHub Actions</strong> was leveraged for automating deployments
+    and publishing detailed HTML reports generated with the <em>htmlextra</em> Newman
+    reporter. These reports summarize test results with an intuitive UI, making it
+    easier for the team to analyze failures and successes.
+  </p>
+
+  <img
+    src="/images/report-screenshot.png"
+    alt="HTML Report Screenshot"
+    class="mb-6 rounded shadow-md border border-default"
+  />
+
+  <p class="mb-4 text-default">
+    The project also incorporated a lightweight app integrating real-time data
+    from a public weather API to demonstrate dynamic API interactions beyond
+    Trello's endpoints. The entire pipeline emphasizes reliability,
+    maintainability, and clear traceability of test outcomes.
+  </p>
+
+  <div class="flex flex-wrap gap-4 mt-6">
+    <a
+      href="https://github.com/yourusername/trello-api-automation"
+      target="_blank"
+      class="px-4 py-2 rounded bg-primary hover:opacity-90 transition"
+    >
+      View GitHub Repository
+    </a>
+    <a
+      href="https://www.postman.com/collections/33274775-b2a05e16-355c-4564-9909-b729ad24f5c2"
+      target="_blank"
+      class="px-4 py-2 rounded bg-secondary hover:opacity-90 transition"
+    >
+      Open Postman Collection
+    </a>
+    <a
+      href="/reports/report.html"
+      download
+      class="px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700 transition"
+    >
+      Download HTML Report
+    </a>
+  </div>
+</div>

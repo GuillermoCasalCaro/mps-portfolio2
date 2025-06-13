@@ -1,12 +1,16 @@
 ---
+import NextTaskProject from "./projects/NextTaskProject.astro";
+import ProjectModalLayout from "./projects/ProjectModalLayout.astro";
+import TrelloProject from "./projects/TrelloProject.astro";
+
 const TAGS = {
   jira: {
     name: "Jira",
-    class: "bg-blue-700 text-white", // similar al azul Atlassian
+    class: "bg-blue-700 text-white",
   },
   xray: {
     name: "Xray",
-    class: "bg-blue-500 text-white", // azul más claro
+    class: "bg-green-600 text-white",
   },
   postman: {
     name: "Postman",
@@ -20,21 +24,27 @@ const TAGS = {
     name: "Jenkins",
     class: "bg-red-600 text-white",
   },
+  githubActions: {
+    name: "GitHub Actions",
+    class: "bg-purple-700 text-white",
+  },
 };
 
 const PROJECTS = [
   {
+    id: "trello",
     title: "Full API Testing Automation of Trello API",
     description:
-      "Designed and implemented a complete API test automation workflow for the Trello public API. Developed a lightweight application that integrates real-time data from a public weather API, focusing on validating request/response behavior and error handling through structured Postman collections.\nAutomated the full test execution pipeline using Newman for CLI-based testing and Jenkins for continuous integration, ensuring reliability and quick feedback across environments.",
+      "Complete test automation for the public Trello API using Postman and Newman. Integrated with Jenkins for CI/CD to ensure reliable tests and fast feedback.",
     link: "#",
     image: "/projects/postman-collections.png",
-    tags: [TAGS.postman, TAGS.newman, TAGS.jenkins],
+    tags: [TAGS.postman, TAGS.newman, TAGS.jenkins, TAGS.githubActions],
   },
   {
+    id: "nexttask",
     title: "Test Plan & Bug Reporting — NextTask App",
     description:
-      "Created a comprehensive test plan for the NextTask productivity application using Xray and Jira, with full documentation managed in Confluence. The plan focuses on validating the core CRUD functionality, including clearly defined test cases, structured execution steps, and a complete traceability matrix to link requirements with validations.\nBug tracking and reporting were handled directly in Jira to ensure streamlined collaboration and issue visibility.",
+      "Created a comprehensive test plan for NextTask using Xray and Jira, with full documentation in Confluence. Focused on core CRUD validation and traceability.",
     link: "#",
     image: "/projects/jira.png",
     tags: [TAGS.jira, TAGS.xray],
@@ -48,42 +58,60 @@ const PROJECTS = [
   </h1>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-8 mt-8 xl:mt-12">
     {
-      PROJECTS.map(({ image, title, description, tags }) => (
-        <article class="flex flex-col h-full bg-offset hover:bg-start transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1 hover:border-primary">
-          <a
-            class="flex flex-col h-full
-          items-center rounded-lg shadow-sm
-           border border-default hover:border-primary"
-          >
-            <div class="w-full h-96 overflow-hidden rounded-t-lg">
-              <img
-                class="object-cover w-full h-full transition-transform duration-500 ease-in-out hover:scale-110"
-                src={image}
-                alt=""
-              />
-            </div>
-            <div class="flex flex-col justify-between p-5 leading-normal flex-grow">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight">{title}</h5>
-              {description.split("\n").map((line) => (
-                <p class="mb-3 font-normal text-xl">{line}</p>
-              ))}
-              <div class="flex flex-wrap mt-2">
-                <ul class="flex flex-row mb-2 gap-x-4">
-                  {tags.map((tag) => (
-                    <li>
-                      <span
-                        class={`flex rounded-full text-s ${tag.class} py-1 px-3 font-bold transition-all duration-200 transform hover:scale-105 hover:shadow-md hover:ring-1 hover:ring-black/10 dark:hover:ring-white/10`}
-                      >
-                        {tag.name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+      PROJECTS.map(({ id, image, title, description, tags }) => (
+        <article
+          data-dialog-open={id}
+          class="flex flex-col h-full bg-offset hover:bg-start transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1 hover:border-primary"
+        >
+          <>
+            <a
+              id={id + "-open"}
+              class="flex flex-col h-full
+      items-center rounded-lg shadow-sm
+      border border-default hover:border-primary
+      cursor-pointer"
+            >
+              <div class="w-full h-96 overflow-hidden rounded-t-lg">
+                <img
+                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out hover:scale-110"
+                  src={image}
+                  alt=""
+                />
               </div>
-            </div>
-          </a>
+              <div class="flex flex-col justify-between p-5 leading-normal flex-grow">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight">{title}</h5>
+                {description.split("\n").map((line) => (
+                  <p class="mb-3 font-normal text-xl">{line}</p>
+                ))}
+
+                <span class="mb-4 text-primary font-semibold italic select-none self-start">
+                  Click to see details →
+                </span>
+
+                <div class="flex flex-wrap mt-2">
+                  <ul class="flex flex-row mb-2 gap-x-4">
+                    {tags.map((tag) => (
+                      <li>
+                        <span
+                          class={`flex rounded-full text-s ${tag.class} py-1 px-3 font-bold transition-all duration-200 transform hover:scale-105 hover:shadow-md hover:ring-1 hover:ring-black/10 dark:hover:ring-white/10`}
+                        >
+                          {tag.name}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </>
         </article>
       ))
     }
   </div>
+  <ProjectModalLayout id="trello">
+    <TrelloProject />
+  </ProjectModalLayout>
+  <ProjectModalLayout id="nexttask">
+    <NextTaskProject />
+  </ProjectModalLayout>
 </section>
