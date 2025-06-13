@@ -1,127 +1,127 @@
 {
-    "basic": {
-        "name": "Mónica Perdomo Santana",
-        "job": "QA Tester",
-        "summary": "I'm learning QA testing on my own and building hands-on experience through a personal project called Solara Codeworks. I'm working on things like writing test cases, finding bugs, using Jira, and trying out tools like Playwright, Postman, and GitHub.",
-        "cv_file_name": "CV Monica Perdomo.pdf",
-        "linkedin": "https://www.linkedin.com/in/m%C3%B3nica-perdomo-santana-0449b0366/"
+  "basic": {
+    "name": "Mónica Perdomo Santana",
+    "job": "QA Tester",
+    "summary": "I'm a self-taught QA enthusiast building hands-on experience through my personal project, Solara Codeworks. I'm actively practicing test case design, bug reporting, and test management using tools like Jira, Postman, Playwright, and GitHub.",
+    "cv_file_name": "CV Monica Perdomo.pdf",
+    "linkedin": "https://www.linkedin.com/in/m%C3%B3nica-perdomo-santana-0449b0366/"
+  },
+  "experiences": [
+    {
+      "title": "Software QA Tester (Collaborative Training Project)",
+      "sub_title": "Solara Codeworks — Seville, Spain",
+      "years": "Apr 2025 – Present",
+      "details": "Designed and executed manual test cases. Logged and tracked bugs using Jira. Performed REST API testing with Postman. Gained experience with basic JavaScript and real-world QA practices within the software development life cycle."
     },
-    "experiences": [
-        {
-            "title": "Software QA Tester (Collaborative Training Project)",
-            "sub_title": "Solara Codeworks — Seville, Spain",
-            "years": "Apr 2025 – Present",
-            "details": "Designed and executed manual test cases. Logged and tracked bugs using Jira. Performed REST API testing with Postman. Gained experience with basic JavaScript and real-world QA practices within the software development life cycle."
-        },
-        {
-            "title": "Translator & Interpreter (FR–ES / EN–ES)",
-            "sub_title": "Ofilingua SL & Spanish Red Cross",
-            "years": "May 2021 – Jun 2024",
-            "details": "Interpreted in real time in police stations, courts, and humanitarian contexts. Translated official documents and managed sensitive multilingual communication. Developed precision, confidentiality, and adaptability in high-pressure settings."
-        }
-    ],
-    "education": [
-        {
-            "title": "Master’s Degree in Secondary Education & Language Teaching",
-            "sub_title": "Universidad Pablo de Olavide",
-            "years": "Nov 2021 – Jun 2022",
-            "details": ""
-        },
-        {
-            "title": "Master’s Degree in Translation, Interpreting and Intercultural Communication (EN–ES)",
-            "sub_title": "Universidad Pablo de Olavide",
-            "years": "Nov 2020 – Jun 2022",
-            "details": "Focused on professional translation, interpreting techniques, and cross-cultural communication in multilingual contexts."
-        },
-        {
-            "title": "Bachelor’s Degree in Modern Languages (EN–FR–DE)",
-            "sub_title": "Universidad de Las Palmas de Gran Canaria",
-            "years": "2014 – 2019",
-            "details": ""
-        }
-    ],
-    "skills": [
-        "Manual Testing",
-        "Bug Tracking",
-        "Test Case Writing",
-        "API Testing",
-        "Basic Automation (Postman)",
-        "Basic JavaScript",
-        "Strong documentation and structured communication",
-        "High attention to detail",
-        "Analytical thinking",
-        "Adaptable",
-        "Fast learner",
-        "Team-oriented"
-    ],
-    "languages": [
-        {
-            "language": "Spanish",
-            "level": "Native"
-        },
-        {
-            "language": "English",
-            "level": "C1 (Trinity ISE III)"
-        },
-        {
-            "language": "French",
-            "level": "C1 (DALF C1)"
-        },
-        {
-            "language": "German",
-            "level": "A2 (Basic)"
-        }
-    ],
-    "courses": [
-        {
-            "title": "Postman: The Complete Guide – REST API Testing",
-            "platform": "Udemy",
-            "details": "Covers manual and automated API testing using Postman, automation via Newman, and CI/CD workflows with GitLab and Jenkins."
-        },
-        {
-            "title": "Software Testing Masterclass (2025) – From Novice to Expert",
-            "platform": "Udemy",
-            "details": "Covers core testing skills across web, mobile, and backend environments. Tools covered: Jira, TestRail, Xray, Confluence, Charles Proxy, Postman, GitHub, Miro."
-        },
-        {
-            "title": "Specialization in Translation for Tourism (EN–ES)",
-            "platform": "Trágora Formación",
-            "details": ""
-        },
-        {
-            "title": "French C1 Linguistic Reinforcement",
-            "platform": "CIREFE, Université Rennes 2",
-            "details": ""
-        },
-        {
-            "title": "Erasmus+ Programme",
-            "platform": "Université Rennes 2 (LEA + English)",
-            "details": ""
-        }
-    ],
-    "projects": [],
-    "menuItems": [
-        {
-            "name": "Home",
-            "link": "#home"
-        },
-        {
-            "name": "Portfolio",
-            "link": "#portfolio"
-        }
-    ],
-    "socialLinks": [
-        {
-            "iconName": "Github",
-            "link": "https://github.com/wasutz/astro-resume-theme"
-        },
-        {
-            "iconName": "Facebook",
-            "link": "https://facebook.com"
-        },
-        {
-            "iconName": "Instagram",
-            "link": "https://instagram.com"
-        }
-    ]
+    {
+      "title": "Translator & Interpreter (FR–ES / EN–ES)",
+      "sub_title": "Ofilingua SL & Spanish Red Cross",
+      "years": "May 2021 – Jun 2024",
+      "details": "Interpreted in real time in police stations, courts, and humanitarian contexts. Translated official documents and managed sensitive multilingual communication. Developed precision, confidentiality, and adaptability in high-pressure settings."
+    }
+  ],
+  "education": [
+    {
+      "title": "Master’s Degree in Secondary Education & Language Teaching",
+      "sub_title": "Universidad Pablo de Olavide",
+      "years": "Nov 2021 – Jun 2022",
+      "details": ""
+    },
+    {
+      "title": "Master’s Degree in Translation, Interpreting and Intercultural Communication (EN–ES)",
+      "sub_title": "Universidad Pablo de Olavide",
+      "years": "Nov 2020 – Jun 2022",
+      "details": "Focused on professional translation, interpreting techniques, and cross-cultural communication in multilingual contexts."
+    },
+    {
+      "title": "Bachelor’s Degree in Modern Languages (EN–FR–DE)",
+      "sub_title": "Universidad de Las Palmas de Gran Canaria",
+      "years": "2014 – 2019",
+      "details": ""
+    }
+  ],
+  "skills": [
+    "Manual Testing",
+    "Bug Tracking",
+    "Test Case Writing",
+    "API Testing",
+    "Basic Automation (Postman)",
+    "Basic JavaScript",
+    "Strong documentation and structured communication",
+    "High attention to detail",
+    "Analytical thinking",
+    "Adaptable",
+    "Fast learner",
+    "Team-oriented"
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "C1 (Trinity ISE III)"
+    },
+    {
+      "language": "French",
+      "level": "C1 (DALF C1)"
+    },
+    {
+      "language": "German",
+      "level": "A2 (Basic)"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Postman: The Complete Guide – REST API Testing",
+      "platform": "Udemy",
+      "details": "Covers manual and automated API testing using Postman, automation via Newman, and CI/CD workflows with GitLab and Jenkins."
+    },
+    {
+      "title": "Software Testing Masterclass (2025) – From Novice to Expert",
+      "platform": "Udemy",
+      "details": "Covers core testing skills across web, mobile, and backend environments. Tools covered: Jira, TestRail, Xray, Confluence, Charles Proxy, Postman, GitHub, Miro."
+    },
+    {
+      "title": "Specialization in Translation for Tourism (EN–ES)",
+      "platform": "Trágora Formación",
+      "details": ""
+    },
+    {
+      "title": "French C1 Linguistic Reinforcement",
+      "platform": "CIREFE, Université Rennes 2",
+      "details": ""
+    },
+    {
+      "title": "Erasmus+ Programme",
+      "platform": "Université Rennes 2 (LEA + English)",
+      "details": ""
+    }
+  ],
+  "projects": [],
+  "menuItems": [
+    {
+      "name": "Home",
+      "link": "#home"
+    },
+    {
+      "name": "Portfolio",
+      "link": "#portfolio"
+    }
+  ],
+  "socialLinks": [
+    {
+      "iconName": "Github",
+      "link": "https://github.com/wasutz/astro-resume-theme"
+    },
+    {
+      "iconName": "Facebook",
+      "link": "https://facebook.com"
+    },
+    {
+      "iconName": "Instagram",
+      "link": "https://instagram.com"
+    }
+  ]
 }

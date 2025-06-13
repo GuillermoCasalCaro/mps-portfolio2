@@ -2,6 +2,9 @@
 import { Image } from "astro:assets";
 import heroImage from "../../assets/mps-profile-pic.png";
 import { basic } from "../../config/cv.json";
+
+const name = basic?.name?.split(" ")[0] ?? "";
+const surname = basic?.name?.split(" ").slice(1).join(" ") ?? "";
 ---
 
 <section id="home" class="py-5 px-4 sm:py-10 lg:py-16">
@@ -17,12 +20,13 @@ import { basic } from "../../config/cv.json";
         />
       </div>
       <div>
-        <p class="text-lg text-offset">
+        <p class="font-bold text-lg text-offset">
           {basic?.job}
         </p>
 
         <h1 class="text-2xl font-bold sm:text-4xl lg:text-5xl mt-3">
-          {basic?.name}
+          {name}
+          <span class="text-marking">{surname}</span>
         </h1>
 
         <p class="mt-5 text-base sm:text-xl">

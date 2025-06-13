@@ -10,6 +10,8 @@ export default {
 			textColor: {
 				default: "var(--color-text)",
 				offset: "var(--color-text-offset)",
+				link: "var(--color-link)",
+				marking: "var(--color-marking)", 
 			},
 			backgroundColor: {
 				default: "var(--color-background)",
