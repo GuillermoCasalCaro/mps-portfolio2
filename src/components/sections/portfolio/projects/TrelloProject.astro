@@ -2,96 +2,56 @@
 
 ---
 
-<div class="sm:text-2xl">
-  <h2 class="text-2xl sm:text-6xl font-bold mb-4 sm:mb-10 text-default">
-    Full API Testing Automation of Trello API
-  </h2>
-  <p class="mb-4">
-    I built a full API test automation workflow for the <strong
-      class="text-yellow-600">Trello API</strong
-    >. My main focus was to make sure all requests, responses, and error cases
-    were covered using a clean and organized <strong class="text-yellow-600"
-      >Postman</strong
-    > collection with tests.
+<div class="modal-content-wrapper">
+  <h2>Full API Testing Automation of Trello API</h2>
+  <p>
+    I built a full API test automation workflow for the <strong>Trello API</strong>. My main focus
+    was to make sure all requests, responses, and error cases were covered using a clean and
+    organized <strong>Postman</strong> collection with tests.
   </p>
-  <img
-    src="/projects/postman.png"
-    alt="Postman Dashboard Screenshot"
-    class="mb-6 rounded shadow-md border border-default"
-  />
-
-  <p class="mb-4">
-    I started testing everything locally with a <strong class="text-yellow-600"
-      >Jenkins</strong
-    > container from <strong class="text-yellow-600">Docker</strong> to get a local
-    CI setup going.
+  <img src="/projects/postman.png" alt="Postman Dashboard Screenshot" />
+  <p>
+    I started testing everything locally with a <strong>Jenkins</strong> container from
+    <strong>Docker</strong> to get a local CI setup going.
   </p>
-  <img
-    src="/projects/docker.png"
-    alt="Docker and Jenkins Setup Screenshot"
-    class="mb-6 rounded shadow-md border border-default"
-  />
-  <img
-    src="/projects/jenkins.png"
-    alt="Jenkins Pipeline Screenshot"
-    class="mb-6 rounded shadow-md border border-default"
-  />
-
-  <p class="mb-4">
-    Later on, I switched to <strong class="text-yellow-600"
-      >GitHub Actions</strong
-    > because it was easier to integrate and let me publish and host the reports
-    publicly.
+  <img src="/projects/docker.png" alt="Docker and Jenkins Setup Screenshot" />
+  <img src="/projects/jenkins.png" alt="Jenkins Pipeline Screenshot" />
+  <p>
+    Later on, I switched to <strong>GitHub Actions</strong> because it was easier to integrate and let
+    me publish and host the reports publicly.
   </p>
-  <img
-    src="/projects/github-actions.png"
-    alt="GitHub Actions Workflow Screenshot"
-    class="mb-6 rounded shadow-md border border-default"
-  />
-
-  <p class="mb-4 text-default">
-    With <strong class="text-yellow-600">GitHub Actions</strong>, I also set up
-    automatic deployments and used the <em>htmlextra</em> reporter for <strong
-      class="text-yellow-600">Newman</strong
-    > to generate rich HTML reports. These reports made it super easy to review test
-    results visually. The whole pipeline is all about being reliable, easy to maintain,
-    and giving clear feedback with every run.
+  <img src="/projects/github-actions.png" alt="GitHub Actions Workflow Screenshot" />
+  <p>
+    With <strong>GitHub Actions</strong>, I also set up automatic deployments and used the
+    <em>htmlextra</em>reporter for <strong>Newman</strong> to generate rich HTML reports. These reports
+    made it super easy to review test results visually. The whole pipeline is all about being reliable,
+    easy to maintain, and giving clear feedback with every run.
   </p>
-
-  <img
-    src="/projects/htmlextra-repost.png"
-    alt="HTML Report Screenshot"
-    class="mb-6 rounded shadow-md border border-default"
-  />
-
-  <p class="mb-4 text-default">
-    You can visit all my work clicking on the below buttons. You can enter on
-    the mentioned <strong class="text-yellow-600">Github</strong> repository. Or
-    see the last generated <strong class="text-yellow-600">report</strong> published.
+  <img src="/projects/htmlextra-repost.png" alt="HTML Report Screenshot" /><p>
+    You can visit all my work clicking on the below buttons. You can enter on the mentioned
+    <strong>Github</strong> repository. Or see the last generated <strong>report</strong> published.
   </p>
-  <div
-    class="flex flex-wrap sm:justify-center flex-col sm:flex-row gap-4 mt-6 sm:mt-10 text-base sm:text-lg"
-  >
+  <div class="modal-buttons">
     <a
       href="https://github.com/MonicaPerdomoSantana/trello-api-automation"
       target="_blank"
-      class="px-4 py-2 text-center rounded bg-primary text-white hover:opacity-90 transition"
-    >
-      <span>GitHub repository</span>
+      role="button"
+      class="bg-primary text-white">
+      GitHub repository
     </a>
     <a
       href="https://www.postman.com/mapaxito/monica-perdomo-public-ws/request/asni4p8/create-board?tab=scripts"
       target="_blank"
-      class="px-4 py-2 text-center rounded bg-secondary text-white hover:opacity-90 transition"
-    >
-      <span>Postman collection</span>
+      role="button"
+      class="bg-secondary text-white">
+      Postman collection
     </a>
     <a
       href="https://monicaperdomosantana.github.io/trello-api-automation/report.html"
       target="_blank"
-      class="px-4 py-2 text-center rounded bg-green-600 text-white hover:opacity-90 transition"
-    >
-      <span>Yesterday's report</span>
+      role="button"
+      class="bg-green-600 text-white">
+      Yesterday's report
     </a>
   </div>
 </div>

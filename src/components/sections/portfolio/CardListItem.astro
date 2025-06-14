@@ -3,16 +3,15 @@ const { title, sub_title, years, details } = Astro.props;
 ---
 
 <li
-  class="p-5 bg-offset shadow-lg rounded-xl border border-default hover:bg-start transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1 hover:border-primary"
->
-  <div class="flex flex-col sm:flex-row justify-between items-start">
+  class="rounded-xl border border-default bg-offset p-5 shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary hover:bg-start hover:shadow-lg">
+  <div class="flex flex-col items-start justify-between sm:flex-row">
     <div class="mb-4 sm:mb-0">
       <h3 class="text-3xl font-semibold">{title}</h3>
-      <p class="text-xl font-medium text-secondary pt-2">{sub_title}</p>
+      <p class="pt-2 text-xl font-medium text-secondary">{sub_title}</p>
     </div>
-    <p class="text-default sm:text-right whitespace-nowrap">
+    <p class="whitespace-nowrap text-default sm:text-right">
       {years}
     </p>
   </div>
-  <p class="mt-4 text-default text-lg leading-relaxed">{details}</p>
+  <p class="mt-4 text-lg leading-relaxed text-default">{details}</p>
 </li>

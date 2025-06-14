@@ -2,27 +2,56 @@
 const { id } = Astro.props;
 ---
 
+<style>
+  :global(.dialog-wrapper) {
+    strong {
+      @apply text-yellow-600;
+    }
+
+    img {
+      @apply mb-6 rounded border border-default shadow-md;
+    }
+
+    h2 {
+      @apply mb-4 text-2xl font-bold text-default sm:mb-10 sm:text-6xl;
+    }
+
+    p {
+      @apply mb-4 text-default;
+    }
+
+    .modal-buttons {
+      @apply mt-6 flex flex-col flex-wrap gap-4 text-base sm:mt-10 sm:flex-row sm:justify-center sm:text-lg;
+
+      a {
+        @apply rounded px-4 py-2 text-center transition hover:opacity-90;
+      }
+    }
+
+    .modal-content-wrapper {
+      @apply sm:text-2xl;
+    }
+  }
+</style>
+
 <div
   id={id}
-  class="fixed inset-0 z-50 hidden items-center justify-center"
+  class="dialog-wrapper fixed inset-0 z-50 hidden items-center justify-center"
   aria-modal="true"
   role="dialog"
   aria-labelledby={`${id}-title`}
   aria-describedby={`${id}-desc`}
-  data-dialog-wrapper
->
+  data-dialog-wrapper>
   <!-- Backdrop -->
   <div
-    class="absolute inset-0 bg-gray-50/30 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-out"
-    data-dialog-backdrop
-  >
+    class="absolute inset-0 bg-gray-50/30 opacity-0 backdrop-blur-sm transition-opacity duration-300 ease-out"
+    data-dialog-backdrop>
   </div>
 
   <!-- Modal Content -->
   <div
-    class="m-4 relative z-10 max-w-4xl w-full max-h-[75vh] overflow-y-auto bg-modal p-6 sm:p-12 rounded-xl shadow-xl opacity-0 translate-y-4 scale-95 transition-all duration-300 ease-out"
-    data-dialog-content
-  >
+    class="relative z-10 m-4 max-h-[75vh] w-full max-w-4xl translate-y-4 scale-95 overflow-y-auto rounded-xl bg-modal p-6 opacity-0 shadow-xl transition-all duration-300 ease-out sm:p-12"
+    data-dialog-content>
     <slot />
   </div>
 </div>
@@ -69,12 +98,8 @@ const { id } = Astro.props;
         if (dialog) {
           openDialog(dialog);
 
-          const backdrop = dialog.querySelector(
-            "[data-dialog-backdrop]"
-          ) as HTMLElement;
-          const content = dialog.querySelector(
-            "[data-dialog-content]"
-          ) as HTMLElement;
+          const backdrop = dialog.querySelector("[data-dialog-backdrop]") as HTMLElement;
+          const content = dialog.querySelector("[data-dialog-content]") as HTMLElement;
 
           backdrop.onclick = () => closeDialog(dialog);
           content.onclick = (e) => e.stopPropagation();
@@ -91,9 +116,7 @@ const { id } = Astro.props;
 
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
-        const openDialog = document.querySelector(
-          "[role='dialog'].flex"
-        ) as HTMLElement;
+        const openDialog = document.querySelector("[role='dialog'].flex") as HTMLElement;
         if (openDialog) closeDialog(openDialog);
       }
     });

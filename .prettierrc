@@ -1,0 +1,15 @@
+{
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro",
+        "printWidth": 100,
+        "htmlWhitespaceSensitivity": "ignore",
+        "singleAttributePerLine": false,
+        "bracketSameLine": true
+      }
+    }
+  ]
+}
