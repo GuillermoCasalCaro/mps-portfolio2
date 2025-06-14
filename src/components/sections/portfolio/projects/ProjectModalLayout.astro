@@ -84,6 +84,7 @@ const { id } = Astro.props;
       dialog.classList.remove("hidden");
       dialog.classList.add("flex");
       document.body.style.overflow = "hidden";
+      if (content) content.scrollTop = 0;
 
       requestAnimationFrame(() => {
         backdrop.classList.add("opacity-100");
