@@ -6,9 +6,9 @@
   --color-background: theme("colors.gray.50");
   --color-background-offset: theme("colors.gray.100");
   --color-border: theme("colors.gray.900" / 10%);
-  --color-body-background-start: #fff;
+  --color-body-background-start: theme("colors.white");
   --color-body-background-end: #fffcf2;
-  --color-modal-background: #fff;
+  --color-modal-background: theme("colors.white");
   --color-link: theme("colors.blue.700");
   --color-marking: theme("colors.yellow.700");
 }
