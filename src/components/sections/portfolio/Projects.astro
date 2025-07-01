@@ -1,5 +1,6 @@
 ---
 import NextTaskProject from "./projects/NextTaskProject.astro";
+import PostgreSQLProject from "./projects/PostgreSQLProject.astro";
 import ProjectModalLayout from "./projects/ProjectModalLayout.astro";
 import TrelloProject from "./projects/TrelloProject.astro";
 
@@ -32,6 +33,14 @@ const TAGS = {
     name: "Agile / Scrum",
     class: "bg-indigo-600 text-white",
   },
+  postgres: {
+    name: "Postgre SQL",
+    class: "bg-emerald-700 text-white",
+  },
+  sql: {
+    name: "SQL",
+    class: "bg-slate-600 text-white",
+  },
 };
 
 const PROJECTS = [
@@ -43,6 +52,15 @@ const PROJECTS = [
     link: "#",
     image: "/projects/postman-collections.png",
     tags: [TAGS.postman, TAGS.newman, TAGS.jenkins, TAGS.githubActions],
+  },
+  {
+    id: "sql-postgres",
+    title: "PostgreSQL Reports Automation — Chinook DB",
+    description:
+      "Automated the execution of SQL scripts on the Chinook music store database using GitHub Actions. Generated CSV reports and published them to GitHub Pages.",
+    link: "#",
+    image: "/projects/sql-postgres.png",
+    tags: [TAGS.postgres, TAGS.githubActions, TAGS.sql],
   },
   {
     id: "nexttask",
@@ -64,6 +82,7 @@ const PROJECTS = [
     {
       PROJECTS.map(({ id, image, title, description, tags }) => (
         <article
+          id={`article-${id}`}
           data-dialog-open={id}
           class="flex h-full flex-col bg-offset transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary hover:bg-start hover:shadow-lg">
           <>
@@ -108,6 +127,9 @@ const PROJECTS = [
   </div>
   <ProjectModalLayout id="trello">
     <TrelloProject />
+  </ProjectModalLayout>
+  <ProjectModalLayout id="sql-postgres">
+    <PostgreSQLProject />
   </ProjectModalLayout>
   <ProjectModalLayout id="nexttask">
     <NextTaskProject />
