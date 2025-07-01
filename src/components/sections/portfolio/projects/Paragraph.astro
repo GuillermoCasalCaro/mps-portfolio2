@@ -1,0 +1,6 @@
+---
+
+const { content } = Astro.props;
+const formattedContent = content.replace(/##(.*?)##/g, "<strong>$1</strong>");
+---
+<p set:html={formattedContent} />

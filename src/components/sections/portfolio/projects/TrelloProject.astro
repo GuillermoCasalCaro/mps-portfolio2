@@ -1,36 +1,21 @@
 ---
+import Paragraph from "./Paragraph.astro";
+
 
 ---
 
 <div class="modal-content-wrapper">
   <h2>Full API Testing Automation of Trello API</h2>
-  <p>
-    I built a full API test automation workflow for the <strong>Trello API</strong>. My main focus
-    was to make sure all requests, responses, and error cases were covered using a clean and
-    organized <strong>Postman</strong> collection with tests.
-  </p>
+  <Paragraph content={'I built a full API test automation workflow for the ##Trello API##. My main focus was to make sure all requests, responses, and error cases were covered using a clean and organized ##Postman## collection with tests.'} />
   <img src="/projects/postman.png" alt="Postman Dashboard Screenshot" />
-  <p>
-    I started testing everything locally with a <strong>Jenkins</strong> container from
-    <strong>Docker</strong> to get a local CI setup going.
-  </p>
+  <Paragraph content={'I started testing everything locally with a ##Jenkins## container from ##Docker## to get a local CI setup going.'} />
   <img src="/projects/docker.png" alt="Docker and Jenkins Setup Screenshot" />
   <img src="/projects/jenkins.png" alt="Jenkins Pipeline Screenshot" />
-  <p>
-    Later on, I switched to <strong>GitHub Actions</strong> because it was easier to integrate and let
-    me publish and host the reports publicly.
-  </p>
+  <Paragraph content={'Later on, I switched to ##GitHub Actions## because it was easier to integrate and let me publish and host the reports publicly.'} />
   <img src="/projects/github-actions.png" alt="GitHub Actions Workflow Screenshot" />
-  <p>
-    With <strong>GitHub Actions</strong>, I also set up automatic deployments and used the
-    <em>htmlextra</em>reporter for <strong>Newman</strong> to generate rich HTML reports. These reports
-    made it super easy to review test results visually. The whole pipeline is all about being reliable,
-    easy to maintain, and giving clear feedback with every run.
-  </p>
-  <img src="/projects/htmlextra-repost.png" alt="HTML Report Screenshot" /><p>
-    You can visit all my work clicking on the below buttons. You can enter on the mentioned
-    <strong>Github</strong> repository. Or see the last generated <strong>report</strong> published.
-  </p>
+  <Paragraph content={'With ##GitHub Actions##, I also set up automatic deployments and used the ##htmlextra## reporter for ##Newman## to generate rich HTML reports. These reports made it super easy to review test results visually. The whole pipeline is all about being reliable, easy to maintain, and giving clear feedback with every run.'} />
+  <img src="/projects/htmlextra-repost.png" alt="HTML Report Screenshot" />
+  <Paragraph content={'You can visit all my work clicking on the below buttons. You can enter on the mentioned ##Github## repository. Or see the last generated ##report## published.'} />
   <div class="modal-buttons">
     <a
       href="https://github.com/MonicaPerdomoSantana/trello-api-automation"
