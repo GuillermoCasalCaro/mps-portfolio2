@@ -1,4 +1,5 @@
 ---
+import NextTaskPlaywrightProject from "./projects/NextTaskPlaywrightProject.astro";
 import NextTaskProject from "./projects/NextTaskProject.astro";
 import PostgreSQLProject from "./projects/PostgreSQLProject.astro";
 import ProjectModalLayout from "./projects/ProjectModalLayout.astro";
@@ -41,9 +42,30 @@ const TAGS = {
     name: "SQL",
     class: "bg-slate-600 text-white",
   },
+  playwright: {
+    name: "Playwright",
+    class: "bg-pink-600 text-white",
+  },
+  typescript: {
+    name: "TypeScript",
+    class: "bg-blue-500 text-white",
+  },
+  javascript: {
+    name: "JavaScript",
+    class: "bg-yellow-400 text-black",
+  },
 };
 
 const PROJECTS = [
+  {
+    id: "nexttask-e2e",
+    title: "E2E Automation - NextTask App with Playwright",
+    description:
+      "End-to-end test automation of the NextTask App using Playwright and TypeScript. Executed on GitHub Actions with clear reporting and fast feedback cycle.",
+    link: "#",
+    image: "/projects/playwright-nexttask.png",
+    tags: [TAGS.playwright, TAGS.typescript, TAGS.githubActions],
+  },
   {
     id: "trello",
     title: "Full API Testing Automation of Trello API",
@@ -55,7 +77,7 @@ const PROJECTS = [
   },
   {
     id: "sql-postgres",
-    title: "PostgreSQL Reports Automation — Chinook DB",
+    title: "PostgreSQL Reports Automation - Chinook DB",
     description:
       "Automated the execution of SQL scripts on the Chinook music store database using GitHub Actions. Generated CSV reports and published them to GitHub Pages.",
     link: "#",
@@ -64,7 +86,7 @@ const PROJECTS = [
   },
   {
     id: "nexttask",
-    title: "Test Plan & Bug Reporting — NextTask App",
+    title: "Test Plan & Bug Reporting - NextTask App",
     description:
       "Created a comprehensive test plan for NextTask using Xray and Jira, with full documentation in Confluence. Focused on core CRUD validation and traceability.",
     link: "#",
@@ -125,6 +147,9 @@ const PROJECTS = [
       ))
     }
   </div>
+  <ProjectModalLayout id="nexttask-e2e">
+    <NextTaskPlaywrightProject />
+  </ProjectModalLayout>
   <ProjectModalLayout id="trello">
     <TrelloProject />
   </ProjectModalLayout>
