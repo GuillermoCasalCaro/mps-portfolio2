@@ -35,12 +35,13 @@ const surname = basic?.name?.split(" ").slice(1).join(" ") ?? "";
 
         <div class="mt-10 flex flex-wrap gap-4">
           <a
-            href={`/cv/${basic?.cv_file_name}`}
-            title="Download CV"
-            download
+            href={`https://drive.google.com/file/d/1VkasSgO0BeiIsjIiPJ3l4SLlidRT0d1w/view?usp=sharing`}
+            title="View CV"
+            target="_blank"
+            rel="noopener noreferrer"
             role="button"
             class="focus:ring-border relative isolate overflow-hidden rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-105 hover:bg-secondary hover:shadow-xl focus:outline-none focus:ring-4">
-            <span class="relative z-10">Download CV</span>
+            <span class="relative z-10">View CV</span>
             <span
               class="pointer-events-none absolute inset-0 z-0 bg-white/20 opacity-0 blur-md transition-opacity duration-500 hover:opacity-100">
             </span>
