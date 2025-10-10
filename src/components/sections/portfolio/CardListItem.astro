@@ -7,9 +7,9 @@ const { title, sub_title, years, details, timespan } = Astro.props;
   <div class="flex flex-col items-start justify-between sm:flex-row">
     <div class="">
       <h3 class="text-3xl font-semibold">{title}</h3>
-      <p class="mb:pt-2 text-xl font-medium text-secondary">{sub_title}</p>
+      <p class="text-xl font-medium text-secondary sm:pt-2">{sub_title}</p>
     </div>
-    <div class="mb:items-end flex flex-col">
+    <div class="flex flex-col sm:items-end">
       <p class="whitespace-nowrap text-default">
         {years}
       </p>

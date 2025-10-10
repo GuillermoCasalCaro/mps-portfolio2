@@ -11,9 +11,8 @@ const surname = basic?.name?.split(" ").slice(1).join(" ") ?? "";
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
       <div class="relative flex justify-center">
-        <!-- add round image here -->
         <Image
-          class="w-full rounded-full md:max-w-md lg:max-w-md"
+          class="lg:max-w-m w-full rounded-full md:max-w-md"
           src={heroImage}
           loading="eager"
           alt="Mónica Perdomo Santana - Profile Picture"
@@ -33,7 +32,7 @@ const surname = basic?.name?.split(" ").slice(1).join(" ") ?? "";
           {basic?.summary}
         </p>
 
-        <div class="mt-10 flex flex-wrap gap-4">
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
           <a
             href={`https://drive.google.com/file/d/1VkasSgO0BeiIsjIiPJ3l4SLlidRT0d1w/view?usp=sharing`}
             title="View CV"
