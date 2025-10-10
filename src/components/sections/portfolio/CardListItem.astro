@@ -1,5 +1,5 @@
 ---
-const { title, sub_title, years, details } = Astro.props;
+const { title, sub_title, years, details, timespan } = Astro.props;
 ---
 
 <li
@@ -9,9 +9,12 @@ const { title, sub_title, years, details } = Astro.props;
       <h3 class="text-3xl font-semibold">{title}</h3>
       <p class="pt-2 text-xl font-medium text-secondary">{sub_title}</p>
     </div>
-    <p class="whitespace-nowrap text-default sm:text-right">
-      {years}
-    </p>
+    <div class="flex flex-col items-end">
+      <p class="whitespace-nowrap text-default">
+        {years}
+      </p>
+      {timespan && <p class="experience-timespan whitespace-nowrap text-default">{timespan}</p>}
+    </div>
   </div>
   <p class="mt-4 text-lg leading-relaxed text-default">{details}</p>
 </li>

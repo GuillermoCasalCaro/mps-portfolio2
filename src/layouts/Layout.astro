@@ -58,6 +58,30 @@ const { title } = Astro.props;
         }
       });
     </script>
+    <script>
+      function calculateMonths(startDate: string) {
+        const start = new Date(startDate);
+        const end = new Date();
+        const diffInMonths =
+          (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+        const years = Math.floor(diffInMonths / 12);
+        const months = diffInMonths % 12;
+        return `${years > 0 ? `${years} year${years > 1 ? "s" : ""}` : ""} ${months > 0 ? `${months} month${months > 1 ? "s" : ""}` : ""}`.trim();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.getElementsByClassName("experience-timespan");
+        if (elements)
+          Array.from(elements).forEach((el) => {
+            if (el instanceof HTMLElement) {
+              el.innerText = el.innerText.replace(
+                "<last-experience-date-replace-me>",
+                calculateMonths("2025-08-01"),
+              );
+            }
+          });
+      });
+    </script>
   </head>
   <body
     class="flex h-full flex-col overflow-x-hidden text-base text-default selection:bg-secondary"

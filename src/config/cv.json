@@ -8,15 +8,24 @@
   },
   "experiences": [
     {
+      "title": "Junior Manual QA",
+      "sub_title": "ALTEN (Project for Generali) – Madrid, Spain",
+      "years": "Aug 2025 – Present",
+      "timespan": "<last-experience-date-replace-me>",
+      "details": "Perform functional and linguistic testing of Generali’s internal web app for insurance policy management. Collaborate with developers, QAs, and POs in an Agile/Scrum environment. Use Jira and Xray to create, execute, and track test cases, ensuring high-quality software delivery."
+    },
+    {
       "title": "Software QA Tester (Collaborative Training Project)",
       "sub_title": "Solara Codeworks - Seville, Spain",
-      "years": "Apr 2025 – Present",
+      "years": "Apr 2025 – Aug 2025",
+      "timespan": "4 months",
       "details": "Designed and executed manual test cases. Logged and tracked bugs using Jira. Performed REST API testing with Postman. Gained experience with basic JavaScript and real-world QA practices within the software development life cycle. Worked in an Agile/Scrum environment."
     },
     {
       "title": "Translator & Interpreter (FR–ES / EN–ES)",
       "sub_title": "Ofilingua SL & Spanish Red Cross",
       "years": "May 2021 – Jun 2024",
+      "timespan": "3 years 1 month",
       "details": "Interpreted in real time in police stations, courts, and humanitarian contexts. Translated official documents and managed sensitive multilingual communication. Developed precision, confidentiality, and adaptability in high-pressure settings."
     }
   ],
