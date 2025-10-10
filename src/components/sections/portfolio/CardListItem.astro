@@ -13,7 +13,11 @@ const { title, sub_title, years, details, timespan } = Astro.props;
       <p class="whitespace-nowrap text-default">
         {years}
       </p>
-      {timespan && <p class="experience-timespan whitespace-nowrap text-default">{timespan}</p>}
+      {
+        timespan && (
+          <p class="experience-timespan whitespace-nowrap text-default">{`(${timespan})`}</p>
+        )
+      }
     </div>
   </div>
   <p class="mt-4 text-lg leading-relaxed text-default">{details}</p>

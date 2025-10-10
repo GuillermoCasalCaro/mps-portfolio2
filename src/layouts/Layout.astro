@@ -63,7 +63,7 @@ const { title } = Astro.props;
         const start = new Date(startDate);
         const end = new Date();
         const diffInMonths =
-          (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+          (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
         const years = Math.floor(diffInMonths / 12);
         const months = diffInMonths % 12;
         return `${years > 0 ? `${years} year${years > 1 ? "s" : ""}` : ""} ${months > 0 ? `${months} month${months > 1 ? "s" : ""}` : ""}`.trim();
