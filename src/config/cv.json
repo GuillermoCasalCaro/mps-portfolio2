@@ -114,8 +114,16 @@
       "link": "#home"
     },
     {
-      "name": "Portfolio",
+      "name": "Experience",
+      "link": "#experience"
+    },
+    {
+      "name": "Personal Projects",
       "link": "#portfolio"
+    },
+    {
+      "name": "Education",
+      "link": "#education"
     }
   ],
   "socialLinks": [

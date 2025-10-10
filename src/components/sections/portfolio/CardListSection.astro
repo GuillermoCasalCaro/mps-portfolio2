@@ -1,18 +1,25 @@
 ---
 import CardListItem from "./CardListItem.astro";
 
+interface Props {
+  title: string;
+  items: Item[];
+  id?: string;
+}
+
 interface Item {
   title: string;
   sub_title: string;
   years: string;
   details?: string;
   timespan?: string | null;
+  id?: string;
 }
 
-const { title, items } = Astro.props;
+const { title, items, id } = Astro.props;
 ---
 
-<section class="bg-background px-10 lg:w-full">
+<section class="bg-background px-10 lg:w-full" id={id}>
   <div class="container mx-auto lg:w-1/2">
     <h2 class="mb-12 text-center text-3xl font-semibold lg:text-5xl">
       {title}
