@@ -2,21 +2,21 @@
   "basic": {
     "name": "Mónica Perdomo Santana",
     "job": "QA Tester",
-    "summary": "I'm a self-taught QA enthusiast building hands-on experience through my personal project, Solara Codeworks. I'm actively practicing test case design, bug reporting, and test management using tools like Jira, Postman, Playwright, and GitHub.",
+    "summary": "I'm a QA Tester, working on a project for a major insurance company. I perform functional and linguistic testing of web applications using Jira and Xray in an Agile/Scrum environment. Passionate about software quality, I continue learning through my personal project, Solara Codeworks.",
     "cv_file_name": "MonicaPerdomo_QATester.pdf",
     "linkedin": "https://www.linkedin.com/in/m%C3%B3nica-perdomo-santana-0449b0366/"
   },
   "experiences": [
     {
-      "title": "Junior Manual QA",
-      "sub_title": "ALTEN (Project for Generali) – Madrid, Spain",
+      "title": "QA Tester",
+      "sub_title": "ALTEN (Project for Generali) – Seville, Spain",
       "years": "Aug 2025 – Present",
       "timespan": "<last-experience-date-replace-me>",
       "details": "Perform functional and linguistic testing of Generali’s internal web app for insurance policy management. Collaborate with developers, QAs, and POs in an Agile/Scrum environment. Use Jira and Xray to create, execute, and track test cases, ensuring high-quality software delivery."
     },
     {
-      "title": "Software QA Tester (Collaborative Training Project)",
-      "sub_title": "Solara Codeworks - Seville, Spain",
+      "title": "QA Tester (Collaborative Project)",
+      "sub_title": "Solara Codeworks – Seville, Spain",
       "years": "Apr 2025 – Aug 2025",
       "timespan": "4 months",
       "details": "Designed and executed manual test cases. Logged and tracked bugs using Jira. Performed REST API testing with Postman. Gained experience with basic JavaScript and real-world QA practices within the software development life cycle. Worked in an Agile/Scrum environment."
