@@ -15,8 +15,8 @@
       "details": "Perform functional and linguistic testing of Generali’s internal web app for insurance policy management. Collaborate with developers, QAs, and POs in an Agile/Scrum environment. Use Jira and Xray to create, execute, and track test cases, ensuring high-quality software delivery."
     },
     {
-      "title": "QA Tester (Collaborative Project)",
-      "sub_title": "Solara Codeworks – Seville, Spain",
+      "title": "QA Tester",
+      "sub_title": "Solara Codeworks (Collaborative Project) – Seville, Spain",
       "years": "Apr 2025 – Aug 2025",
       "timespan": "4 months",
       "details": "Designed and executed manual test cases. Logged and tracked bugs using Jira. Performed REST API testing with Postman. Gained experience with basic JavaScript and real-world QA practices within the software development life cycle. Worked in an Agile/Scrum environment."
@@ -75,37 +75,38 @@
     {
       "language": "French",
       "level": "C1 (DALF C1)"
-    },
-    {
-      "language": "German",
-      "level": "A2 (Basic)"
     }
   ],
   "courses": [
     {
       "title": "Postman: The Complete Guide – REST API Testing",
       "platform": "Udemy",
-      "details": "Covers manual and automated API testing using Postman, automation via Newman, and CI/CD workflows with GitLab and Jenkins."
+      "details": "Covers manual and automated API testing using Postman, automation via Newman, and CI/CD workflows with GitLab and Jenkins.",
+      "url": "https://www.udemy.com/course/postman-the-complete-guide/"
     },
     {
       "title": "Software Testing Masterclass (2025) – From Novice to Expert",
       "platform": "Udemy",
-      "details": "Covers core testing skills across web, mobile, and backend environments. Tools covered: Jira, TestRail, Xray, Confluence, Charles Proxy, Postman, GitHub, Miro."
+      "details": "Covers core testing skills across web, mobile, and backend environments. Tools covered: Jira, TestRail, Xray, Confluence, Charles Proxy, Postman, GitHub, Miro.",
+      "url": "https://www.udemy.com/course/postman-the-complete-guide/"
     },
     {
       "title": "Specialization in Translation for Tourism (EN–ES)",
       "platform": "Trágora Formación",
-      "details": ""
+      "details": "",
+      "hide": true
     },
     {
       "title": "French C1 Linguistic Reinforcement",
       "platform": "CIREFE, Université Rennes 2",
-      "details": ""
+      "details": "",
+      "hide": true
     },
     {
       "title": "Erasmus+ Programme",
       "platform": "Université Rennes 2 (LEA + English)",
-      "details": ""
+      "details": "",
+      "hide": true
     }
   ],
   "menuItems": [
@@ -124,20 +125,6 @@
     {
       "name": "Education",
       "link": "#education"
-    }
-  ],
-  "socialLinks": [
-    {
-      "iconName": "Github",
-      "link": "https://github.com/wasutz/astro-resume-theme"
-    },
-    {
-      "iconName": "Facebook",
-      "link": "https://facebook.com"
-    },
-    {
-      "iconName": "Instagram",
-      "link": "https://instagram.com"
     }
   ]
 }
